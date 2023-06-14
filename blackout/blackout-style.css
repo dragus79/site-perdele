@@ -1,0 +1,30 @@
+/* Scroll  */
+.scroll-container {
+  background-color: #333;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Track */
+.scroll-container::-webkit-scrollbar-track {
+  background: #6262b2;
+}
+
+/* Handle */
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #494991;
+}
+
+/* Handle on hover */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: royalblue;
+}
+
+.scroll-container img {
+  padding: 10px;
+  height: 500px;
+  object-fit: contain;
+}
