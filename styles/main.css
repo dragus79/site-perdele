@@ -135,6 +135,25 @@ p {
     display: block;
   }
 }
+
+/* Hero */
+.hero {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 32px;
+}
+
+.hero > div {
+  align-items: center;
+  flex: 1;
+}
+
+.main-logo {
+  margin-top: 16px;
+  width: 300px;
+  object-fit: contain;
+}
 /* Stiluri pentru meniu */
 nav {
   display: flex;
