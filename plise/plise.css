@@ -1,0 +1,42 @@
+/* Grilă foto */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.column {
+  flex-basis: 25%;
+  max-width: 25%;
+  padding: 10px;
+}
+
+.column img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Butoanele din grilă */
+.row .btn {
+  flex-basis: 100%;
+}
+
+.one {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.two {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.three {
+  flex-basis: 33.33%;
+  max-width: 33.33%;
+}
+
+.four {
+  flex-basis: 25%;
+  max-width: 25%;
+}
