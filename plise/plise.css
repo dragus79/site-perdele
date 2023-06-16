@@ -1,3 +1,72 @@
+/* Grid */
+/* Resetare stiluri implicite */
+.custom-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.custom-list li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+  line-height: 1.5;
+}
+
+.custom-list li:before {
+  content: "";
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 10px;
+  height: 10px;
+  background-color: #000;
+}
+
+.custom-list .text {
+  font-weight: bold;
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Antet */
+.header {
+  text-align: center;
+  padding: 10px;
+}
+
+.header h1 {
+  margin: 0;
+}
+.header {
+  display: flex;
+  justify-content: center;
+}
+
+.button-container {
+  display: flex;
+  justify-content: center;
+}
+
+/* Butoanele din antet */
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.header .btn {
+  display: inline-block;
+  margin-left: 0 5px;
+  vertical-align: middle;
+}
+
 /* Grilă foto */
 .row {
   display: flex;
@@ -21,6 +90,24 @@
   flex-basis: 100%;
 }
 
+/* Butoane active */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: #666;
+}
+
+.btn.active {
+  background-color: #666;
+  color: #f1c40f;
+}
 .one {
   flex-basis: 100%;
   max-width: 100%;
@@ -39,4 +126,34 @@
 .four {
   flex-basis: 25%;
   max-width: 25%;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Adjust this as needed: flex-start, center, flex-end */
+  gap: 10px; /* Adjust this as needed: spacing between buttons */
+}
+p {
+  font-size: 8px; /* Ajustați dimensiunea fontului la preferința dvs. */
+}
+p {
+  font-family: "Arial", sans-serif; /* Alegeți un font care este mai ușor de citit */
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #666;
+  cursor: pointer;
+  font-size: 20px;
+  transition: border-color 0.3s; /* Adăugați o tranziție la culoarea bordurii */
+}
+
+.btn:hover {
+  background-color: #ddd;
+  border: 2px solid #f1c40f; /* Adăugați bordura galbenă la hover */
+}
+
+.btn.active {
+  background-color: #666;
+  color: antiquewhite;
 }
