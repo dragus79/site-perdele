@@ -1,22 +1,20 @@
 body {
-  background-image: url("../images/cover.webp");
+  background-image: url("cover.webp");
   background-repeat: no-repeat;
   background-size: cover;
+  filter: grayscale(100%);
 }
-
-.background-highlight {
-  box-shadow: inset 0 0 20px rgba(0, 0, 0, 0.5);
-  margin: 20px;
-  filter: brightness(120%);
+html,
+body {
+  filter: none !important;
+  -webkit-filter: none !important;
 }
-
-header {
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .title {
   font-size: 36px;
   font-weight: bold;
@@ -40,57 +38,6 @@ h2 {
   text-align: center;
   margin: 0;
 }
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-}
-.right img:hover {
-  transform: scale(1.05);
-  z-index: 1;
-}
-
-.left,
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  width: 50%;
-  overflow: hidden;
-}
-
-.left img,
-.right img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border: 1px solid #333;
-  transition: transform 0.2s ease-in-out;
-}
-
-.left img:hover,
-.right img:hover {
-  transform: scale(1.05);
-}
-.left h2,
-.right h2 {
-  font-size: 28px;
-  color: unset;
-}
-
-.left p,
-.right p {
-  font-size: 25px;
-  font-style: bold;
-}
-p {
-  background-color: rgba(255, 255, 255, 0.7); /* Fundal semitransparent */
-  padding: 15px; /* Adaugă un spațiu între text și marginile fundalului */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombrire */
-}
-/* Meniu */
 /* Meniu responsiv */
 @media screen and (max-width: 768px) {
   .menu-toggle {
@@ -134,38 +81,6 @@ p {
   .dropdown:hover .dropdown-menu {
     display: block;
   }
-}
-
-/* Hero */
-.main-logo {
-  margin-top: 10px;
-  width: 100px;
-  object-fit: contain;
-  border-radius: 50%; /* Adaugă bordură rotundă */
-  transition: transform 0.3s, box-shadow 0.3s; /* Adaugă tranziție pentru efectul hover */
-}
-
-.main-logo:hover {
-  transform: scale(1.1); /* Mărește ușor dimensiunea la hover */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Adaugă o umbră la hover */
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.hero > div {
-  align-items: center;
-  flex: 1;
-}
-
-.main-logo {
-  margin-top: 10px;
-  width: 100px;
-  object-fit: contain;
 }
 /* Stiluri pentru meniu */
 nav {
@@ -241,6 +156,10 @@ nav ul li .dropdown-menu li a {
   nav ul {
     flex-direction: column;
     background-color: #f1c40f;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
   }
 
   nav ul li {
@@ -418,171 +337,128 @@ nav {
   top: 70px;
   position: absolute;
   z-index: 9999;
+  /* alte stiluri aici */
 }
 
-/* Realizarile noastre */
-
-.image-grid1 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 200px);
-  gap: 10px;
+/*Carousel */
+/* Style for the carousel */
+.carousel {
+  margin: auto;
+  width: 70%; /* sau orice altă lățime dorită */
+}
+.carousel-inner img[src="drap11.jpg"] {
+  object-fit: contain;
+  width: 90%;
+  height: 90%;
 }
 
-.image-grid1 img {
+.carousel-inner img {
+  width: 60%;
+  max-height: 600px;
+}
+
+.carousel-caption {
+  background-color: #333;
+  opacity: 0.5;
+  padding: 10px 20px;
+  color: #fff;
+  border-radius: 10px;
+}
+
+.carousel-caption h3 {
+  font-size: 25px;
+  font-weight: bold;
+}
+
+.carousel-indicators li {
+  background-color: aqua;
+}
+
+.carousel-indicators .active {
+  background-color: #333;
+}
+.carousel-inner {
+  position: relative;
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* Stilurile pentru containerul de imagini */
-.image-grid1 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-content: center;
+  overflow: hidden;
+  text-align: center;
+  margin: 0 auto;
 }
 
-/* Stilurile pentru fereastra modală */
-#modal-container1 {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
+/* Style for the left and right control buttons */
+.carousel-control {
+  color: #f1c40f;
+  opacity: 0.5;
+  text-align: center;
+  text-shadow: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.carousel-control:hover,
+.carousel-control:focus {
+  color: burlywood;
+  opacity: 0.9;
+  outline: none;
+  text-decoration: none;
+  background-color: rgba(0, 0, 0, 0);
+}
+
+.carousel-control.left {
   left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
 }
 
-#modal-content1 {
+.carousel-control.right {
+  right: 0;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
   position: absolute;
   top: 50%;
+  z-index: 5;
+  display: inline-block;
+}
+
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .icon-prev {
   left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0px 0px 10px #000;
 }
 
-#modal-image1 {
-  max-width: 100%;
-  max-height: 100%;
+.carousel-control .glyphicon-chevron-right,
+.carousel-control .icon-next {
+  right: 50%;
 }
 
-#modal-close1 {
-  position: absolute;
-  top: 10px;
-  right: 10px;
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
   font-size: 30px;
-  cursor: pointer;
+  margin-top: -15px;
 }
 
-#modal-close1:hover {
-  color: #aaa;
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  font-size: 20px;
+  margin-top: -10px;
 }
-h4 {
-  font-size: 30px;
-  margin: 40px 0 20px;
-  text-align: center;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
-  color: black;
-}
-/* Adăugați aceste stiluri pentru a reduce distanța dintre cele două containere */
-h4 {
-  font-size: 30px;
-  margin: 40px 0 20px;
-  text-align: center;
-  text-shadow: 4px 4px 6px rgba(0, 0, 0, 0.6);
-  color: #000;
-}
-.image-grid1:last-child {
-  margin-bottom: 10px;
-}
-
-.image-grid2:first-child {
-  margin-top: 10px;
-}
-
-#modal-close1:hover {
-  color: #aaa;
-}
-.image-grid2 {
-  margin-top: 50px;
-}
-
-.image-grid2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-template-rows: repeat(5, 200px);
-  gap: 10px;
-}
-
-.image-grid2 img {
+.carousel-inner img {
   width: 100%;
-  height: 100%;
-  object-fit: cover;
-}
-/* Stilurile pentru containerul de imagini */
-.image-grid2 {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  justify-content: center;
+  height: auto;
 }
 
-/* Stilurile pentru fereastra modală */
-#modal-container2 {
-  position: fixed;
-  z-index: 9999;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.8);
-  display: none;
+@media screen and (min-width: 768px) {
+  .carousel-inner img {
+    width: 60%;
+  }
 }
 
-#modal-content2 {
-  position: absolute;
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  background-color: #fff;
-  padding: 20px;
-  box-shadow: 0px 0px 10px #000;
-}
-
-#modal-image2 {
-  max-width: 100%;
-  max-height: 100%;
-}
-
-#modal-close2 {
-  position: absolute;
-  top: 10px;
-  right: 10px;
-  font-size: 30px;
-  cursor: pointer;
-}
-
-#modal-close2:hover {
-  color: bisque;
-}
-.image-grid2 {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  grid-gap: 40px;
-  margin-top: 40px;
-  padding: 40px;
-}
-.image-modal {
-  border: 5px solid gray;
-  padding: 10px;
+.carousel {
+  margin-bottom: 20px; /* Adaugă un spațiu de 20px între carusel și footer */
 }
 
 /* Footer */
 /* Stilizare footer */
-
 footer {
   background-color: bisque;
   padding: 40px 0;
