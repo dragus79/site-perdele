@@ -1,0 +1,124 @@
+/* Grid */
+/* Resetare stiluri implicite */
+ul {
+  list-style-type: disc; /* Setează marcatorul la o bulină */
+  margin-left: 20px; /* Spațierea la stânga */
+}
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+/* Antet */
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.header h1 {
+  margin: 0;
+}
+
+/* Butoanele din antet */
+.header {
+  text-align: center;
+  padding: 32px;
+}
+
+.header .btn {
+  display: inline-block;
+  margin-left: 0 5px;
+  vertical-align: middle;
+}
+
+/* Grilă foto */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: -10px;
+}
+
+.column {
+  flex-basis: 25%;
+  max-width: 25%;
+  padding: 10px;
+}
+
+.column img {
+  width: 100%;
+  margin-bottom: 10px;
+}
+
+/* Butoanele din grilă */
+.row .btn {
+  flex-basis: 100%;
+}
+
+/* Butoane active */
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1c40f;
+  cursor: pointer;
+  font-size: 20px;
+}
+
+.btn:hover {
+  background-color: blueviolet;
+}
+
+.btn.active {
+  background-color: #666;
+  color: white;
+}
+.one {
+  flex-basis: 100%;
+  max-width: 100%;
+}
+
+.two {
+  flex-basis: 50%;
+  max-width: 50%;
+}
+
+.three {
+  flex-basis: 33.33%;
+  max-width: 33.33%;
+}
+
+.four {
+  flex-basis: 25%;
+  max-width: 25%;
+}
+.button-container {
+  display: flex;
+  justify-content: flex-end; /* Adjust this as needed: flex-start, center, flex-end */
+  gap: 10px; /* Adjust this as needed: spacing between buttons */
+}
+p {
+  font-size: 20px; /* Ajustați dimensiunea fontului la preferința dvs. */
+}
+p {
+  font-family: "Arial", sans-serif; /* Alegeți un font care este mai ușor de citit */
+}
+.btn {
+  border: none;
+  outline: none;
+  padding: 10px 16px;
+  background-color: #f1f1f1;
+  cursor: pointer;
+  font-size: 20px;
+  transition: border-color 0.3s; /* Adăugați o tranziție la culoarea bordurii */
+}
+
+.btn:hover {
+  background-color: #ddd;
+  border: 2px solid #f1c40f; /* Adăugați bordura galbenă la hover */
+}
+
+.btn.active {
+  background-color: #666;
+  color: antiquewhite;
+}

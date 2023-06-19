@@ -1,5 +1,5 @@
 body {
-  background-image: url("../images/cover.webp");
+  background-image: url("cover.webp");
   background-repeat: no-repeat;
   background-size: cover;
 }
@@ -135,38 +135,6 @@ p {
     display: block;
   }
 }
-
-/* Hero */
-.main-logo {
-  margin-top: 10px;
-  width: 100px;
-  object-fit: contain;
-  border-radius: 50%; /* Adaugă bordură rotundă */
-  transition: transform 0.3s, box-shadow 0.3s; /* Adaugă tranziție pentru efectul hover */
-}
-
-.main-logo:hover {
-  transform: scale(1.1); /* Mărește ușor dimensiunea la hover */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Adaugă o umbră la hover */
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.hero > div {
-  align-items: center;
-  flex: 1;
-}
-
-.main-logo {
-  margin-top: 10px;
-  width: 100px;
-  object-fit: contain;
-}
 /* Stiluri pentru meniu */
 nav {
   display: flex;
@@ -241,6 +209,10 @@ nav ul li .dropdown-menu li a {
   nav ul {
     flex-direction: column;
     background-color: #f1c40f;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
   }
 
   nav ul li {
@@ -419,13 +391,98 @@ nav {
   position: absolute;
   z-index: 9999;
 }
+/* Thumbnail */
+.card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  max-width: 940px; /* Setează lățimea maximă a containerului */
+  margin: 0 auto; /* Centrează containerul pe pagină */
+}
+.column {
+  width: calc(
+    50% - 30px
+  ); /* Calculează lățimea coloanelor pentru a le încadra pe orizontală */
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin: 10px;
+}
 
+.card {
+  border: 8px solid gray;
+  overflow: hidden;
+  color: #333;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+.image-container {
+  position: relative;
+}
+
+#firstImage,
+#secondImage,
+#thirthImage,
+#fourthImage {
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+.thumbnail-container {
+  display: flex;
+  justify-content: center;
+  margin-top: 40px;
+  background-color: antiquewhite;
+}
+
+.thumbnail {
+  width: 60px;
+  height: 60px;
+  border: 10px solid gray;
+  cursor: pointer;
+  transition: opacity 0.3s ease;
+  margin: 0 5px;
+}
+
+.caption {
+  text-align: center;
+  margin-top: 10px;
+}
+.arrow {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 24px;
+  color: #fff;
+  background-color: rgba(0, 0, 0, 0.5);
+  padding: 5px;
+  cursor: pointer;
+}
+
+.left-arrow {
+  left: 5px;
+}
+
+.right-arrow {
+  right: 5px;
+}
+
+@media (max-width: 768px) {
+  .card-container {
+    flex-direction: column;
+  }
+  .column {
+    margin: 10px 0;
+  }
+}
 /* Footer */
 /* Stilizare footer */
 
 footer {
   background-color: bisque;
-  padding: 50px 0;
+  padding: 40px 0;
   color: #333;
   font-family: Arial, sans-serif;
 }
@@ -436,7 +493,7 @@ footer {
 }
 
 .subscribe-container {
-  flex-basis: 30%;
+  flex-basis: 40%;
   text-align: right;
 }
 

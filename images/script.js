@@ -1,3 +1,5 @@
+console.log("heloo");
+
 //Meniu Hamburger
 const menuToggle = document.querySelector('.menu-toggle');
 const nav = document.querySelector('.sidebar ul');
@@ -20,36 +22,57 @@ function closeMenuOnResize() {
 }
 
 
- // Get all elements with the class 'image-container'
- var imageContainers = document.querySelectorAll('.image-container');
+// Get all card images
+const cardImages = document.querySelectorAll('.card1-image');
 
- // Add the 'click' event to each element
- imageContainers.forEach(function(container) {
-   container.addEventListener('click', function() {
-     // Add your desired JavaScript code for the click action here
-     // You can open a modal, display an enlarged image, navigate to another page, etc.
-     console.log('Image clicked');
-   });
- });
+// Get the modal and its content element
+const modal = document.getElementById('myModal');
+const modalContent = document.querySelector('.modal-content');
 
-// Footer
-document.querySelector('.back-to-top').addEventListener('click', function() {
-  // Obține elementul meniului
-  const menu = document.querySelector('#meniu');
+// Get the close button
+const closeButton = document.querySelector('.close');
 
-  // Verifică dacă meniul este vizibil sau ascuns
-  if (menu.style.display === 'none') {
-    // Dacă meniul este ascuns, îl afișăm
-    menu.style.display = 'block';
-  } else {
-    // Dacă meniul este vizibil, îl ascundem
-    menu.style.display = 'none';
+// Loop through all card images and add click event listener to each one
+for (let i = 0; i < cardImages.length; i++) {
+  cardImages[i].addEventListener('click', function() {
+    // Create a new image element for the modal
+    const modalImage = document.createElement('img');
+    modalImage.src = this.src;
+    modalImage.alt = this.alt;
+
+    // Clear any previous content from the modal
+    modalContent.innerHTML = '';
+
+    // Add the new image to the modal
+    modalContent.appendChild(modalImage);
+
+    // Show the modal
+    modal.style.display = 'block';
+  });
+}
+
+// Get the modal close button and add click event listener
+if (closeButton) {
+  closeButton.addEventListener('click', function() {
+    // Hide the modal
+    modal.style.display = 'none';
+  });
+}
+
+// Close modal when user clicks outside of it
+window.addEventListener('click', function(event) {
+  if (event.target == modal) {
+    // Hide the modal
+    modal.style.display = 'none';
   }
 });
 
 
-//Animatie
 
+
+
+// Footer
+//Animatie
 
 document.querySelector('.back-to-top').addEventListener('click', function() {
   // Adăugăm clasa "animate" pentru a porni animația
@@ -108,3 +131,4 @@ document.querySelector('#emailButton').addEventListener('click', function(event)
   // Derulați la elementul dorit
   contactSection.scrollIntoView({ behavior: 'smooth' });
 }); 
+

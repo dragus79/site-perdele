@@ -1,0 +1,207 @@
+/* Carduri */
+.card-gallery {
+  border: 2px solid #ccc;
+  padding: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: stretch; /* Asigură înălțimea egală a cardurilor */
+  gap: 10px; /* Adaugă un spațiu între carduri */
+}
+.card-container {
+  margin-bottom: 20px; /* Adăugați o margine inferioară pentru a evita suprapunerea footerului */
+}
+
+.card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  flex: 1 1 auto;
+}
+.card-gallery img {
+  margin: 2px;
+}
+
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 1;
+  padding-top: 100px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  display: block;
+  width: 80%;
+  max-width: 700px;
+}
+
+.modal-content img {
+  width: 100%;
+  margin-bottom: 20px;
+}
+
+.close {
+  position: absolute;
+  top: 15px;
+  right: 35px;
+  color: #f1f1f1;
+  font-size: 40px;
+  font-weight: bold;
+  transition: 0.3s;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+/* Card 1 */
+.card1-image,
+.card2-image,
+.card3-image,
+.card4-image {
+  width: 90%;
+  height: auto;
+  object-fit: cover;
+  cursor: pointer;
+  border: 8px solid antiquewhite;
+}
+
+.card4-gallery {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.card4-gallery:after {
+  content: "";
+  flex: auto;
+}
+
+.card4-modal .modal-images {
+  display: flex;
+  justify-content: center;
+}
+
+.card4-modal .modal-images img {
+  max-height: 80vh;
+  max-width: 80vw;
+  margin: auto;
+}
+.card1-image {
+  width: 100%;
+  height: 250px; /* Ajustați dimensiunea dorită */
+  object-fit: cover;
+}
+
+/* Common card styles */
+.card-img-top {
+  height: 200px;
+  object-fit: cover;
+  border: 8px solid antiquewhite;
+}
+
+.card-title {
+  font-family: "Pacifico", cursive;
+  font-size: 30px;
+  text-align: center;
+  margin-top: 10px;
+  text-shadow: 1px 1px gray;
+}
+
+.card-body p {
+  padding: 20px;
+  transition: max-height 0.5s ease-in-out;
+}
+
+.new-class {
+  font-size: 5px;
+  font-weight: bold;
+  color: #333;
+  background-color: #ccc;
+  padding: 5px;
+  border-radius: 4px;
+  margin-top: 5px;
+  text-align: center;
+}
+
+.contact-name,
+.contact-details {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.btn-primary {
+  align-self: center;
+  margin-top: auto;
+}
+
+.card {
+  border: 1px solid #ccc;
+  border-radius: 5px;
+  overflow: hidden;
+  height: auto;
+}
+
+.card-color {
+  background-color: antiquewhite;
+}
+
+.container-fluid {
+  margin: 0;
+  padding: 0;
+}
+
+.card-text {
+  margin: 0;
+  padding: 0;
+  font-size: 20px;
+  text-align: justify;
+  line-height: 1.5;
+}
+
+@media (max-width: 991px) {
+  .card-img-top {
+    height: 200px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .card-body p {
+    max-height: none;
+  }
+}
+
+@media (max-width: 767px) {
+  .card-img-top {
+    height: 150px;
+  }
+
+  .card-title {
+    font-size: 20px;
+  }
+
+  .card-body p {
+    padding: 10px;
+  }
+
+  .card-text {
+    font-size: 16px;
+  }
+}
+.card-img-top {
+  width: 100%;
+  height: 250px; /* Ajustați dimensiunea dorită */
+  object-fit: cover;
+}
