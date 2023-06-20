@@ -10,13 +10,12 @@ body {
   filter: brightness(120%);
 }
 
-header {
+.header {
   display: flex;
   flex-direction: column;
   justify-content: center;
   align-items: center;
 }
-
 .title {
   font-size: 36px;
   font-weight: bold;
@@ -40,57 +39,6 @@ h2 {
   text-align: center;
   margin: 0;
 }
-.container {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  overflow: hidden;
-}
-.right img:hover {
-  transform: scale(1.05);
-  z-index: 1;
-}
-
-.left,
-.right {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  margin: 20px;
-  width: 50%;
-  overflow: hidden;
-}
-
-.left img,
-.right img {
-  width: 100%;
-  max-width: 400px;
-  height: auto;
-  border: 1px solid #333;
-  transition: transform 0.2s ease-in-out;
-}
-
-.left img:hover,
-.right img:hover {
-  transform: scale(1.05);
-}
-.left h2,
-.right h2 {
-  font-size: 28px;
-  color: unset;
-}
-
-.left p,
-.right p {
-  font-size: 25px;
-  font-style: bold;
-}
-p {
-  background-color: rgba(255, 255, 255, 0.7); /* Fundal semitransparent */
-  padding: 15px; /* Adaugă un spațiu între text și marginile fundalului */
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Ombrire */
-}
-/* Meniu */
 /* Meniu responsiv */
 @media screen and (max-width: 768px) {
   .menu-toggle {
@@ -134,38 +82,6 @@ p {
   .dropdown:hover .dropdown-menu {
     display: block;
   }
-}
-
-/* Hero */
-.main-logo {
-  margin-top: 10px;
-  width: 100px;
-  object-fit: contain;
-  border-radius: 50%; /* Adaugă bordură rotundă */
-  transition: transform 0.3s, box-shadow 0.3s; /* Adaugă tranziție pentru efectul hover */
-}
-
-.main-logo:hover {
-  transform: scale(1.1); /* Mărește ușor dimensiunea la hover */
-  box-shadow: 0 0 8px rgba(0, 0, 0, 0.3); /* Adaugă o umbră la hover */
-}
-
-.hero {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  gap: 15px;
-}
-
-.hero > div {
-  align-items: center;
-  flex: 1;
-}
-
-.main-logo {
-  margin-top: 10px;
-  width: 100px;
-  object-fit: contain;
 }
 /* Stiluri pentru meniu */
 nav {
@@ -241,6 +157,10 @@ nav ul li .dropdown-menu li a {
   nav ul {
     flex-direction: column;
     background-color: #f1c40f;
+    position: absolute;
+    top: 70px;
+    left: 0;
+    right: 0;
   }
 
   nav ul li {
@@ -418,6 +338,26 @@ nav {
   top: 70px;
   position: absolute;
   z-index: 9999;
+  /* alte stiluri aici */
+}
+/* Hero */
+.main-logo {
+  margin-top: 10px;
+  object-fit: contain;
+  width: 100px;
+  height: 100px;
+  border-radius: 50%;
+  transition: transform 0.3s ease-in-out;
+}
+
+.main-logo:hover {
+  transform: rotate(360deg);
+}
+
+.main-logo {
+  margin-top: 10px;
+  width: 100px;
+  object-fit: contain;
 }
 
 /* Footer */
@@ -425,18 +365,18 @@ nav {
 
 footer {
   background-color: bisque;
-  padding: 50px 0;
+  padding: 40px 0;
   color: #333;
   font-family: Arial, sans-serif;
+  width: 100%;
 }
-
 .contact-container {
   flex-basis: 60%;
   text-align: left;
 }
 
 .subscribe-container {
-  flex-basis: 30%;
+  flex-basis: 40%;
   text-align: right;
 }
 
@@ -567,6 +507,33 @@ li {
   .subscribe-container {
     flex-basis: 100%;
     margin-bottom: 20px;
+  }
+  .links-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .anpc-sal,
+  .anpc-sol {
+    width: 250px;
+    margin: 5px;
+  }
+
+  .anpc-sal:hover,
+  .anpc-sol:hover {
+    opacity: 0.1;
+  }
+
+  .link-item {
+    margin: 10px;
+  }
+
+  .link-item input {
+    width: 300px;
+    padding: 8px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
   }
 }
 .social-links ul {

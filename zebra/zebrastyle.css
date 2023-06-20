@@ -1,0 +1,48 @@
+/* Scroll  */
+.scroll-container {
+  background-color: darkkhaki;
+  overflow: auto;
+  white-space: nowrap;
+  padding: 10px;
+  margin-top: 16px;
+  margin-bottom: 16px;
+}
+
+/* Track */
+.scroll-container::-webkit-scrollbar-track {
+  background: #6262b2;
+}
+
+/* Handle */
+.scroll-container::-webkit-scrollbar-thumb {
+  background: #494991;
+}
+
+/* Handle on hover */
+.scroll-container::-webkit-scrollbar-thumb:hover {
+  background: royalblue;
+}
+
+.scroll-container img {
+  padding: 10px;
+  height: 500px;
+  object-fit: contain;
+}
+text {
+  font-size: 30px;
+  font-weight: bold;
+  color: #494991;
+  text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+/* Stiluri responsive */
+@media (max-width: 768px) {
+  .text {
+    font-size: 34px;
+  }
+}
+
+@media (max-width: 576px) {
+  .text {
+    font-size: 18px;
+  }
+}

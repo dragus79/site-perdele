@@ -19,37 +19,23 @@ function closeMenuOnResize() {
   }
 }
 
+// Despre noi
+  // Get all elements with the class 'image-container'
+  var imageContainers = document.querySelectorAll('.image-container');
 
- // Get all elements with the class 'image-container'
- var imageContainers = document.querySelectorAll('.image-container');
+  // Add the 'click' event to each element
+  imageContainers.forEach(function(container) {
+    container.addEventListener('click', function() {
+      // Add your desired JavaScript code for the click action here
+      // You can open a modal, display an enlarged image, navigate to another page, etc.
+      console.log('Image clicked');
+    });
+  });
 
- // Add the 'click' event to each element
- imageContainers.forEach(function(container) {
-   container.addEventListener('click', function() {
-     // Add your desired JavaScript code for the click action here
-     // You can open a modal, display an enlarged image, navigate to another page, etc.
-     console.log('Image clicked');
-   });
- });
-
-// Footer
-document.querySelector('.back-to-top').addEventListener('click', function() {
-  // Obține elementul meniului
-  const menu = document.querySelector('#meniu');
-
-  // Verifică dacă meniul este vizibil sau ascuns
-  if (menu.style.display === 'none') {
-    // Dacă meniul este ascuns, îl afișăm
-    menu.style.display = 'block';
-  } else {
-    // Dacă meniul este vizibil, îl ascundem
-    menu.style.display = 'none';
-  }
-});
 
 
 //Animatie
-
+//Footer
 
 document.querySelector('.back-to-top').addEventListener('click', function() {
   // Adăugăm clasa "animate" pentru a porni animația

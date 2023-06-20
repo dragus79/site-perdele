@@ -21,9 +21,6 @@ function closeMenuOnResize() {
 }
 
 // Despre noi
-
-
-
   // Get all elements with the class 'image-container'
   var imageContainers = document.querySelectorAll('.image-container');
 
