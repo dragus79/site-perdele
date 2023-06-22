@@ -1,0 +1,524 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/css/lightbox.min.css"
+    />
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.4/jquery.min.js"></script>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/lightbox2/2.11.3/js/lightbox.min.js"></script>
+
+    <link
+      href="https://fonts.googleapis.com/css?family=Pacifico&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+    />
+
+    <link rel="icon" type="image/x-icon" href="/favicon.ico" />
+
+    <link rel="stylesheet" type="text/css" href="../styles/main.css" />
+    <link rel="stylesheet" type="text/css" href="./style-accesorii.css" />
+  </head>
+
+  <body>
+    <div id="top">
+      <nav class="sidebar">
+        <button class="menu-toggle" aria-label="Toggle navigation">
+          <span></span>
+          <span></span>
+          <span></span>
+        </button>
+        <ul>
+          <div class="hero">
+            <div>
+              <img
+                class="main-logo"
+                src="../logo/logo4.jpg"
+                alt="Lumea Decorului"
+              />
+            </div>
+          </div>
+          <li><a href="../despre-noi/despre-noi.html">Despre Noi</a></li>
+          <li>
+            <a href="../realizarile-noastre/realizarile-noastre.html"
+              >Realizarile Noastre</a
+            >
+          </li>
+          <li class="dropdown">
+            <a href="#">Perdele & Draperii</a>
+            <ul class="dropdown-menu">
+              <li><a href="../perdele/perdele.html">Perdele</a></li>
+              <li><a href="../draperii/draperii.html">Draperii</a></li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Sisteme de Prindere</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="../sine-din-aliminiu/sine-din-aluminiu.html"
+                  >Sine din Aluminiu</a
+                >
+              </li>
+              <li>
+                <a href="../sine-semirotunde/sine-semirotunde.html"
+                  >Sine Semirotunde</a
+                >
+              </li>
+              <li>
+                <a href="../galerii-metalice/galerii-metalice.html"
+                  >Galerii Metalice</a
+                >
+              </li>
+              <li>
+                <a href="../galerii-lemn/galerii-din-lemn.html"
+                  >Galerii din Lemn</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Jaluzele</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="../jaluzele-verdicale/jaluzele-verticale.html"
+                  >Jaluzele Verticale</a
+                >
+              </li>
+              <li>
+                <a href="../orizontale/jaluzele-orizontale.html"
+                  >Jaluzele Orizontale</a
+                >
+              </li>
+              <li>
+                <a href="../jaluzele-plysse/jaluzele-plysse.html"
+                  >Jaluzele Plisse</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li class="dropdown">
+            <a href="#">Rulouri</a>
+            <ul class="dropdown-menu">
+              <li>
+                <a href="../rulouri-blackout/rulouri-blackout.html"
+                  >Rulouri Blackout</a
+                >
+              </li>
+              <li><a href="../zebra/rulouri-zebra.html">Rulouri Zebra</a></li>
+              <li><a href="../velux/rulouri-velux.html">Rulouri Velux</a></li>
+              <li>
+                <a href="../rulouri-transparente/rulouri-transparente.html"
+                  >Rulouri Transparente</a
+                >
+              </li>
+            </ul>
+          </li>
+          <li><a href="../accesorii/accesorii.html">Accesorii</a></li>
+          <li><a href="../servicii.html">Servicii</a></li>
+          <li><a href="../contact.html">Contact</a></li>
+        </ul>
+      </nav>
+    </div>
+    <header>
+      <h1>Lumea Decorului</h1>
+      <h2>Suntem la dispozitia dumneavoastra!!!</h2>
+    </header>
+
+    <!-- Images used to open the lightbox -->
+    <div class="container">
+      <div class="row">
+        <div class="column">
+          <img
+            src="../images/drap5.jpg"
+            onclick="openModal();currentSlide(1)"
+            class="lightbox-thumbnail"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="../images/ac4.jpg"
+            onclick="openModal();currentSlide(2)"
+            class="lightbox-thumbnail"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="../images/art0.jpg"
+            onclick="openModal();currentSlide(3)"
+            class="lightbox-thumbnail"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="../images/act17.jpg"
+            onclick="openModal();currentSlide(4)"
+            class="lightbox-thumbnail"
+          />
+        </div>
+
+        <div class="column">
+          <img
+            src="../images/act20.jpg "
+            onclick="openModal();currentSlide(5)"
+            class="lightbox-thumbnail"
+          />
+        </div>
+        <div class="column">
+          <img
+            src="../images/act21.jpg"
+            onclick="openModal();currentSlide(6)"
+            class="lightbox-thumbnail"
+          />
+        </div>
+      </div>
+    </div>
+
+    <div class="lightbox-container">
+      <!-- The Modal/Lightbox -->
+      <div id="myModal" class="modal">
+        <span class="close cursor" onclick="closeModal()">&times;</span>
+        <div class="modal-content">
+          <div class="mySlides">
+            <div class="numbertext">1 / 16</div>
+            <img src="../images/art1.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">2 / 16</div>
+            <img src="../images/art2.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">3 / 16</div>
+            <img src="../images/art3.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">4 / 16</div>
+            <img src="../images/art5.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">5 / 16</div>
+            <img src="../images/art9.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">6/ 16</div>
+            <img src="../images/art10.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">7/ 16</div>
+            <img src="../images/art11.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">9 / 16</div>
+            <img src="../images/art12.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">10 / 16</div>
+            <img src="../images/art12.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">11 / 16</div>
+            <img src="../images/art14.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">12 / 16</div>
+            <img src="../images/art15.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">13 / 16</div>
+            <img src="../images/act19.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">14 / 16</div>
+            <img src="../images/art8.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">15 / 16</div>
+            <img src="../images/art1.jpg" />
+          </div>
+
+          <div class="mySlides">
+            <div class="numbertext">16 / 16</div>
+            <img src="../images/art7.jpg" />
+          </div>
+        </div>
+        <div class="other-containers">
+          <!-- Next/previous controls -->
+          <a class="prev" onclick="plusSlides(-1)">&#10094;</a>
+          <a class="next" onclick="plusSlides(1)">&#10095;</a>
+          <!-- Caption text -->
+          <div class="caption-container">
+            <p id="caption"></p>
+          </div>
+        </div>
+        <!-- Thumbnail image controls -->
+        <div class="row-thumbnails">
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art5.jpg"
+              onclick="currentSlide(1)"
+              alt="Carlige"
+            />
+          </div>
+
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art6.jpg"
+              onclick="currentSlide(2)"
+              alt="Carlige"
+            />
+          </div>
+
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art7.jpg"
+              onclick="currentSlide(3)"
+              alt="Carlige"
+            />
+          </div>
+
+          <div class="column-thumbnail">
+            <img
+              class="demo"
+              src="../images/art8.jpg"
+              onclick="currentSlide(4)"
+              alt="Carlige"
+            />
+          </div>
+
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art9.jpg"
+              onclick="currentSlide(5)"
+              alt="Carlige"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art10.jpg"
+              onclick="currentSlide(6)"
+              alt="Carlige"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art11.jpg"
+              onclick="currentSlide(7)"
+              alt="Carlige"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art12.jpg"
+              onclick="currentSlide(8)"
+              alt="Carlige"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art7.jpg"
+              onclick="currentSlide(9)"
+              alt="Carlige"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art14.jpg"
+              onclick="currentSlide(10)"
+              alt="Magneti"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art15.jpg"
+              onclick="currentSlide(11)"
+              alt="Carlige"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/aet13.jpg"
+              onclick="currentSlide(12)"
+              alt="Ciucuri"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/acces4.jpg"
+              onclick="currentSlide(13)"
+              alt="Magneti"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/acces7.jpg"
+              onclick="currentSlide(14)"
+              alt="Magneti"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/art10.jpg"
+              onclick="currentSlide(15)"
+              alt="Carlige"
+            />
+          </div>
+          <div class="column-thumbnail">
+            <img
+              class="lightbox-thumbnail"
+              src="../images/act19.jpg"
+              onclick="currentSlide(16)"
+              alt="Magneti"
+            />
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!---    Footer    -->
+    <footer>
+      <section id="contact">
+        <div class="container">
+          <div class="row">
+            <div class="col-md-4">
+              <a href="#top" class="back-to-top" aria-label="Go to Contact">
+                <i class="fa fas-arrow-up"></i>
+              </a>
+
+              <ul class="list-unstyled">
+                <li>
+                  <i class="fa fa-phone">0759847917</i>
+                </li>
+                <li>
+                  <i class="fa fa-envelope"></i>
+                  <a
+                    href="mailto:ramona.dragus@yahoo.com"
+                    class="btn btn-primary"
+                    >ramona.dragus@yahoo.com</a
+                  >
+                </li>
+              </ul>
+              <button class="btn btn-primary" id="emailButton" href="#contact">
+                Trimite un e-mail
+              </button>
+            </div>
+            <div class="col-md-4">
+              <span class="adresa-title">
+                <i class="fa fa-map-marker-alt"></i>Adresa:
+              </span>
+              <span class="adresa-detalii">
+                str.Victoriei; nr 74; oras Negresti-Oas; jud. Satu Mare; cod
+                445200; Romania.
+              </span>
+            </div>
+            <div class="col-md-4">
+              <div class="subscribe-container">
+                <h4>Subscribe</h4>
+                <form class="subscribe-form">
+                  <div class="form-group">
+                    <input
+                      type="email"
+                      class="form-control"
+                      id="exampleInputEmail1"
+                      aria-describedby="emailHelp"
+                      placeholder="Enter your email address"
+                    />
+                  </div>
+                  <button type="submit" class="btn btn-primary">
+                    Subscribe
+                  </button>
+                </form>
+                <div class="subscribe-buttons-container">
+                  <a href="#top" class="back-to-top" data-aos="fade-up">
+                    <i class="fa fa-arrow-up"></i>
+                  </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4">
+            <div class="my-element" data-aos="fade-up"></div>
+            <div class="social-links">
+              <ul>
+                <li>
+                  <a
+                    href="https://www.facebook.com/profile.php?id=100009659570148"
+                  >
+                    <i class="fa fa-facebook"></i>
+                  </a>
+                </li>
+                <li>
+                  <a href="https://www.instagram.com/lumeadecorului/">
+                    <i class="fa fa-instagram"></i>
+                  </a>
+                </li>
+                <li>
+                  <a
+                    href="https://vymaps.com/RO/Lumea-Decorului-Negresti-Oas-1246938885348697/"
+                  >
+                    <i class="fa fa-google"></i>
+                  </a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </div>
+      <div></div>
+      <div>
+        <div>
+          <div>
+            <div></div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+    <script>
+      // Cod JavaScript pentru a inițializa AOS
+      document.addEventListener("DOMContentLoaded", function () {
+        AOS.init();
+      });
+    </script>
+    <script src="./script-accesorii.js"></script>
+  </body>
+</html>
