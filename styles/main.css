@@ -370,6 +370,18 @@ footer {
   font-family: Arial, sans-serif;
   width: 100%;
 }
+
+footer .row {
+  justify-content: space-between;
+  display: grid;
+  grid-template-columns: repeat(12, 1fr);
+  grid-gap: 2px;
+}
+
+.col-md-4 {
+  grid-column: auto/span 4;
+}
+
 .contact-container {
   flex-basis: 60%;
   text-align: left;
