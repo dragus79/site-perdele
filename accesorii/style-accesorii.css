@@ -1,0 +1,334 @@
+/* Thumbnails */
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  margin-top: 20px;
+}
+
+.column {
+  flex: 25%;
+  max-width: 200px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; /* Adăugăm această linie pentru a așeza miniaturile într-o coloană verticală */
+}
+
+.lightbox-thumbnail {
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+  margin-bottom: 10px; /* Adăugăm această linie pentru a separa miniaturile */
+}
+
+.lightbox-thumbnail:hover {
+  opacity: 1;
+}
+
+.active-thumbnail,
+.lightbox-thumbnail:hover {
+  opacity: 1;
+}
+.caption-container {
+  text-align: center;
+  padding: 2px 16px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+}
+.demo {
+  opacity: 0.6;
+}
+
+.active-slide {
+  display: block;
+}
+
+/* Thumbnail Controls */
+
+.row-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.column-thumbnail {
+  flex: 25%;
+  max-width: 200px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-thumbnail {
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lightbox-thumbnail:hover {
+  opacity: 1;
+}
+
+.active-thumbnail,
+.lightbox-thumbnail:hover {
+  opacity: 1;
+}
+/* Modal */
+.modal {
+  display: none;
+  position: fixed;
+  z-index: 9999;
+  padding-top: 50px;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  overflow: auto;
+  background-color: rgba(0, 0, 0, 0.9);
+}
+
+.modal-content {
+  margin: auto;
+  max-width: 800px;
+}
+
+.mySlides {
+  display: none;
+  text-align: center;
+}
+
+.mySlides img {
+  max-width: 100%;
+  height: auto;
+  margin: auto;
+  transition: 0.3s;
+}
+
+.mySlides img:hover {
+  transform: scale(1.1);
+}
+.numbertext {
+  color: #f2f2f2;
+  font-size: 12px;
+  padding: 8px 12px;
+  text-align: center;
+}
+
+.close {
+  color: #f2f2f2;
+  font-size: 35px;
+  font-weight: bold;
+  position: absolute;
+  top: 10px;
+  right: 25px;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.close:hover,
+.close:focus {
+  color: #bbb;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.prev,
+.next {
+  cursor: pointer;
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+.caption-container {
+  text-align: center;
+  padding: 2px 16px;
+  color: white;
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  background-color: rgba(0, 0, 0, 0.6);
+}
+.mySlides {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  max-height: 90vh;
+}
+
+.mySlides img {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+}
+
+/* Caption Text */
+.caption-container {
+  text-align: center;
+  background-color: rgba(0, 0, 0, 0.8);
+  padding: 2px 16px;
+  color: white;
+}
+
+.caption-container p {
+  margin: 0;
+  padding: 0;
+}
+/* Create four equal columns that sits next to each other */
+.column {
+  flex: 25%;
+  max-width: 25%;
+  padding: 0 4px;
+}
+
+.column img {
+  vertical-align: middle;
+  width: 100%;
+  cursor: pointer;
+}
+
+.lightbox-thumbnail {
+  opacity: 0.6;
+}
+
+.lightbox-thumbnail:hover {
+  opacity: 1;
+}
+.container {
+  /* Stiluri generale pentru containere */
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 20px;
+}
+
+.lightbox-container {
+  /* Stiluri specifice pentru containerul lightbox */
+  position: relative;
+}
+
+.other-containers {
+  /* Stiluri pentru celelalte containere */
+  margin-top: 20px;
+  padding: 10px;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+}
+/* Lightbox Container */
+.lightbox-container {
+  position: relative;
+  overflow: hidden;
+}
+
+.lightbox-image {
+  max-width: 100%;
+  max-height: 100%;
+  object-fit: contain;
+  transition: transform 0.3s ease;
+}
+
+.lightbox-slide.active-slide .lightbox-image {
+  transform: scale(1.2);
+}
+
+/* Next/Previous Controls */
+.prev,
+.next {
+  position: absolute;
+  top: 50%;
+  width: auto;
+  padding: 16px;
+  margin-top: -50px;
+  color: white;
+  font-weight: bold;
+  font-size: 20px;
+  transition: 0.6s ease;
+  border-radius: 0 3px 3px 0;
+  user-select: none;
+  -webkit-user-select: none;
+}
+
+.next {
+  right: 0;
+  border-radius: 3px 0 0 3px;
+}
+
+.prev:hover,
+.next:hover {
+  background-color: rgba(0, 0, 0, 0.8);
+}
+
+/* Caption Text */
+.caption-container {
+  text-align: center;
+  padding: 2px 16px;
+  color: white;
+}
+
+/* Thumbnail Image Controls */
+.row-thumbnails {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+.column-thumbnail {
+  flex: 25%;
+  max-width: 200px;
+  padding: 5px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.lightbox-thumbnail {
+  width: 100%;
+  height: auto;
+  opacity: 0.6;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.lightbox-thumbnail:hover {
+  opacity: 1;
+}
+
+.active-thumbnail,
+.lightbox-thumbnail:hover {
+  opacity: 1;
+}
