@@ -286,6 +286,7 @@ nav ul li a:hover {
   }
   /* cu acestea */
   nav ul {
+    align-items: center;
     display: flex;
     flex-direction: row;
   }
@@ -341,6 +342,9 @@ nav {
   /* alte stiluri aici */
 }
 /* Hero */
+.hero {
+  margin-right: 16px;
+}
 .main-logo {
   margin-top: 10px;
   object-fit: contain;
